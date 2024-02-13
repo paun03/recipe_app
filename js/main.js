@@ -2,7 +2,7 @@
 
 // IMPORTS
 
-import * as FillOut from "./ui.js";
+import * as Ui from "./ui.js";
 
 // SELECTORS
 
@@ -20,8 +20,10 @@ let divSearchedRecipes = document.querySelector("#divSearchedRecipes");
 btnSearch.addEventListener("click", async (e) => {
     e.preventDefault();
     divSearchedRecipes.innerHTML = "";
-    FillOut.fillOutDivSearchedRecipes(inputRecipeSearch.value);
+    Ui.fillOutDivSearchedRecipes(inputRecipeSearch.value);
     localStorage.setItem("searchValue", inputRecipeSearch.value);
+    let pop = Ui.addPop();
+    pop.play();
 });
 
 divColorTheme.addEventListener("click", (e) => {
@@ -37,5 +39,5 @@ divColorTheme.addEventListener("click", (e) => {
 
 window.addEventListener("load", (e) => {
     e.preventDefault(); 
-    FillOut.fillOutDivSearchedRecipes(localStorage.getItem("searchValue"));
+    Ui.fillOutDivSearchedRecipes(localStorage.getItem("searchValue"));
 });

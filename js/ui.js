@@ -6,6 +6,12 @@ import * as FetchData from "./fetch.js";
 
 // FUNCTIONS
 
+let addPop = () => {
+    let audio = new Audio('audio/pop.mp3');
+    audio.volume = 0.3;
+    return audio;
+};
+
 let fillOutDivSearchedRecipes = async (fetchedValue) => {
     try {
         let fetchedData = await FetchData.fetchRecipe(fetchedValue);
@@ -23,6 +29,7 @@ let fillOutDivSearchedRecipes = async (fetchedValue) => {
             p.innerHTML = fetchedData.meals[i].strArea + ", ";
             let p2 = document.createElement("p");
             p2.innerHTML = fetchedData.meals[i].strCategory + ".";
+            div.setAttribute("value", i);
             div2.append(p, p2);
             div.append(img, h3, div2);
             divSearchedRecipes.append(div);
@@ -34,4 +41,4 @@ let fillOutDivSearchedRecipes = async (fetchedValue) => {
 
 // EXPORTS
 
-export {fillOutDivSearchedRecipes};
+export {fillOutDivSearchedRecipes, addPop};
