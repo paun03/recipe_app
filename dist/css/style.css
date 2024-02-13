@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +10,18 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.darkMode {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+.darkMode a {
+  color: white;
+}
+.darkMode .divRecipe {
+  color: black;
 }
 
 nav {
@@ -116,7 +129,9 @@ nav div img {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  height: 300px;
+  height: 320px;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 #sectionRecipes #divSearchedRecipes .divRecipe h3 {
   margin-left: 4px;
@@ -125,13 +140,16 @@ nav div img {
   width: 100%;
   height: 240px;
 }
-#sectionRecipes #divSearchedRecipes .divPrepTime {
+#sectionRecipes #divSearchedRecipes .divRecipe:hover {
+  scale: 1.1;
+}
+#sectionRecipes #divSearchedRecipes .divMoreInfo {
   margin-top: 12px;
   margin-left: 4px;
   display: flex;
   gap: 4px;
 }
-#sectionRecipes #divSearchedRecipes .divPrepTime img {
+#sectionRecipes #divSearchedRecipes .divMoreInfo img {
   width: 20px;
   height: 20px;
 }/*# sourceMappingURL=style.css.map */
