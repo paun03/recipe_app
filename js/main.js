@@ -1,3 +1,5 @@
+// FUNCTIONS
+
 let fetchRecipe = async (recipeName) => {
     try {
         let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`);
@@ -7,7 +9,5 @@ let fetchRecipe = async (recipeName) => {
         console.error(error);
     }
 };
-
-// let fetchedRecipeData = await fetchRecipe("Chicken");
 
 console.log(fetchRecipe(""));
