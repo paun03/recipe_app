@@ -15,6 +15,9 @@ let btnSearch = document.querySelector("#btnSearch");
 
 let divSearchedRecipes = document.querySelector("#divSearchedRecipes");
 
+let sectionRecipes = document.querySelector("#sectionRecipes");
+let sectionSelectedRecipe = document.querySelector("#sectionSelectedRecipe");
+
 // EVENT LISTENERS
 
 btnSearch.addEventListener("click", async (e) => {
@@ -35,6 +38,11 @@ divColorTheme.addEventListener("click", (e) => {
         imgColorThemeIcon.src = "images/modeSwitch/moon.png";
     }
     colorCounter++;
+});
+
+divSearchedRecipes.addEventListener("click", (e) => {
+    e.preventDefault();
+    Ui.fillOutSelectedRecipe(localStorage.getItem("searchValue"), e);
 });
 
 window.addEventListener("load", (e) => {

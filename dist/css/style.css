@@ -152,4 +152,21 @@ nav div img {
 #sectionRecipes #divSearchedRecipes .divMoreInfo img {
   width: 20px;
   height: 20px;
+}
+
+#sectionSelectedRecipe {
+  margin-top: 80px;
+  width: 600px;
+}
+#sectionSelectedRecipe img {
+  width: 100%;
+}
+#sectionSelectedRecipe h2 {
+  font-size: 36px;
+}
+#sectionSelectedRecipe h3 {
+  font-size: 28px;
+}
+#sectionSelectedRecipe p {
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
