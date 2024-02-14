@@ -169,4 +169,24 @@ nav div img {
 }
 #sectionSelectedRecipe p {
   font-size: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+  #sectionMain h1 {
+    font-size: 36px;
+  }
+  #sectionMain #divSearchMenu #inputRecipeSearch {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #sectionMain h1 {
+    font-size: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 24px;
+  }
+  #sectionMain #divSearchMenu #inputRecipeSearch {
+    width: 250px;
+  }
 }/*# sourceMappingURL=style.css.map */

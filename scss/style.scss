@@ -194,3 +194,38 @@ nav div {
     }
 
 }
+
+@media screen and (max-width: 1500px) {
+    #sectionMain {
+
+        h1 {
+            font-size: 36px;
+        }
+
+        #divSearchMenu {
+
+            #inputRecipeSearch {
+                width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #sectionMain {
+
+        h1 {
+            font-size: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 24px;
+        }
+
+        #divSearchMenu {
+
+            #inputRecipeSearch {
+                width: 250px;
+            }
+        }
+    }
+}

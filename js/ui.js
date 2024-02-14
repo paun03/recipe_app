@@ -64,7 +64,7 @@ let fillOutSelectedRecipe = async (fetchedValue, e) => {
                     sectionSelectedRecipe.append(h2, img, h3, p, iframe);
                     setTimeout(() => {
                         sectionSelectedRecipe.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
+                    }, 300);
                 }
             }
         }
