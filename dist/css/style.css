@@ -189,4 +189,7 @@ nav div img {
   #sectionMain #divSearchMenu #inputRecipeSearch {
     width: 250px;
   }
+  #sectionSelectedRecipe {
+    width: 95%;
+  }
 }/*# sourceMappingURL=style.css.map */
