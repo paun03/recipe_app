@@ -56,12 +56,12 @@ let fillOutSelectedRecipe = async (fetchedValue, e) => {
                     h3.innerHTML = "How To Prepare?";
                     let p = document.createElement("p");
                     p.innerHTML = selectedMeal.strInstructions;
-                    let iframe = document.createElement("iframe");
-                    iframe.width = "100%";
-                    iframe.height = 400;
-                    iframe.src = `${selectedMeal.strYoutube}/embed/YsJXZwE5pdY`;
-                    iframe.allowFullscreen;
-                    sectionSelectedRecipe.append(h2, img, h3, p, iframe);
+                    let a = document.createElement("a");
+                    let p2 = document.createElement("p");
+                    a.href = `${selectedMeal.strYoutube}/embed/YsJXZwE5pdY/`;
+                    p2.innerHTML = `Click Here to Check Out Recipe for ${selectedMeal.strMeal}`;
+                    a.append(p2);
+                    sectionSelectedRecipe.append(h2, img, h3, p, a);
                     setTimeout(() => {
                         sectionSelectedRecipe.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 300);
